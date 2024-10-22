@@ -34,16 +34,16 @@ export class SigninComponent implements OnInit {
     } else {
       console.log('Form is invalid');
     }
-    console.log(this.form);
-    console.log(this.form.controls);
   }
 
-  isValid(fieldName: string) {
-    return this.form.get(fieldName)?.valid;
+  isValid(fieldName: any) {
+    // console.log(this.form.get(`data.${fieldName}`)?.valid);
+
+    return this.form.get(`data.${fieldName}`)?.valid;
   }
 
   isTouched(fieldName: string) {
-    return this.form.get(fieldName)?.touched;
+    return this.form.get(`data.${fieldName}`)?.touched;
   }
 
   isInvalidTouched(fieldName: string) {

@@ -48,7 +48,7 @@
           formControlName="password"
         />
         <label>Password</label>
-        <span *ngIf="isValid('password')" class="text-light"
+        <span *ngIf="isInvalidTouched('password')" class="text-light"
           >Inserisci la pass</span
         >
       </div>
@@ -59,7 +59,7 @@
           type="password"
           class="form-control"
           placeholder=""
-          formControlName="password"
+          formControlName="confermaPassword"
         />
         <label>Conferma Password</label>
       </div>
